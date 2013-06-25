@@ -1,15 +1,21 @@
 UnityMappingFactory
 ====================
 
-Adds an Extension method to the [IUnityContainer](http://msdn.microsoft.com/en-us/library/microsoft.practices.unity.iunitycontainer.aspx) which allows you to register factories that will create new objects based on data from existing objects essentially mapping from one class hierarchy to a different class hierarchy.
+Adds an Extension method to the [IUnityContainer](http://msdn.microsoft.com/en-us/library/microsoft.practices.unity.iunitycontainer.aspx) which allows you to register factories that will create new objects based on data from existing objects essentially mapping from one type hierarchy to a different type hierarchy.
 
-The goal was simplicity and readability. No need to declare individual factory classes or interfaces! Just add the mappings right where you register the classes during the bootstrapping process.
+The goal was simplicity and readability. No need to declare individual factory classes or even interfaces! Just add the mappings right where you register the classes during the normal bootstrapping process.
 
-You must register anything you are creating (container.RegisterType) in the container (aka. the generic **TTo** input). 
+## NOTE(s):
 
-You do NOT need to register anthying that you are mapping from (aka. the generic **TFrom** input).
+* You must register anything you are creating using the **container.RegisterType** method in the container (aka. the generic **TTo** input).
+ 
+* You do NOT need to register anthying that you are mapping from (aka. the generic **TFrom** input).
 
-### Simple 1-class to 1-class mapping:
+* You do NOT need to register any base or abstract types unless you are specifically creating them.
+
+## Example(s):
+
+#### Simple 1-class to 1-class mapping:
 
 ```csharp 
 //make sure to register the output...
@@ -22,7 +28,7 @@ container.RegisterFactory<IPerson, IPersonViewModel>()
 
 This will map any **IPerson** instances as a parameter that will be used to create any instances of the **IPersonViewModel**.
 
-### Mapping between 2 different class hierarchies:
+#### Mapping between 2 different class hierarchies:
 
 ```csharp
 //make sure to register the output...
@@ -39,7 +45,6 @@ This will provide the following 2 mappings:
 1. The **IImageWidget** instances will be a parameter that will be used to create any instances of the **IImageWidgetViewModel**.
 
 2. The **ITextWidget** instances will be a parameter that will be used to create any instances of the **ITextWidgetViewModel**.
-
 
 ## Details
 
