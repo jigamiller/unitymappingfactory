@@ -7,10 +7,8 @@ The goal was simplicity and readability. No need to declare individual factory c
 
 ## NOTE(s):
 
-* You must register anything you are creating using the **container.RegisterType** method in the container (aka. the generic **TTo** input).
- 
+* You must register anything you are creating using the [IUnityContainer.RegisterType](http://msdn.microsoft.com/en-us/library/ee649762.aspx) method in the container (aka. the generic **TTo** input). 
 * You do NOT need to register anthying that you are mapping from (aka. the generic **TFrom** input).
-
 * You do NOT need to register any base or abstract types unless you are specifically creating them.
 
 ## Example(s):
