@@ -5,9 +5,9 @@ Adds an Extension method to the [IUnityContainer](http://msdn.microsoft.com/en-u
 
 The goal was simplicity and readability. No need to declare individual factory classes or interfaces! Just add the mappings right where you register the classes during the bootstrapping process.
 
-You must register anything you are creating (_container.RegisterType_) in the container (_aka._ the generic **TTo** input). 
+You must register anything you are creating (container.RegisterType) in the container (aka. the generic **TTo** input). 
 
-You do NOT need to register anthying that you are mapping from (_aka._ the generic **TFrom** input).
+You do NOT need to register anthying that you are mapping from (aka. the generic **TFrom** input).
 
 ### Simple 1-class to 1-class mapping:
 
@@ -20,7 +20,7 @@ container.RegisterFactory<IPerson, IPersonViewModel>()
 	.AddDefaultMap();
 ```
 
-This will map any **IContainer** instances as a parameter that will be used to create any instances of the **IContainerViewModel**.
+This will map any **IPerson** instances as a parameter that will be used to create any instances of the **IPersonViewModel**.
 
 ### Mapping between 2 different class hierarchies:
 
