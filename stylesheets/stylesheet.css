@@ -100,7 +100,7 @@ Theme Styles
 
 #main-menu li a {
 	text-align:center;
-	padding:6px;
+	padding:6px;	
 	text-decoration:none;
 	text-transform:uppercase;
 }
@@ -110,7 +110,7 @@ Theme Styles
 }
 
 #main-menu-current a {	
-	color:#999
+	color:#FFF
 }
 
 

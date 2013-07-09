@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "UnityMappingFactory"
 date: 2013-07-01 8:59
 comments: true
@@ -21,7 +21,7 @@ The goal was simplicity and readability. No need to declare individual factory c
 
 #### Simple 1-class to 1-class mapping:
 
-```csharp 
+```c# 
 //make sure to register the output...
 container.RegisterType<IPersonViewModel, PersonViewModel>();
 
@@ -34,7 +34,7 @@ This will map any **IPerson** instances as a parameter that will be used to crea
 
 #### Mapping between 2 different class hierarchies:
 
-```csharp
+```c#
 //make sure to register the output...
 container.RegisterType<IImageWidgetViewModel, ImageWidgetViewModel>();
 container.RegisterType<ITextWidgetViewModel, TextWidgetViewModel>();

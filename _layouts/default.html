@@ -1,10 +1,12 @@
 ---
 navigation:
 - text: Home
-  title: Home
-  url: /index.html
+  title: Home  
+  fullurl: /index.html
+  url: /
 - text: Design
   title: Design Considerations
+  fullurl: /design.html
   url: /design.html
 ---
 
@@ -33,16 +35,16 @@ navigation:
 		  
           <h1 id="project_title">UnityMappingFactory</h1>
           <h2 id="project_tagline">Extension which allows you to register factories that will create new objects based on data from different existing objects essentially mapping between them.</h2>		  		 
-		  
+		  		  
 			<section id="downloads">			  
               <a class="zip_download_link" href="https://github.com/jigamiller/unitymappingfactory/zipball/master">Download this project as a .zip file</a>
               <a class="tar_download_link" href="https://github.com/jigamiller/unitymappingfactory/tarball/master">Download this project as a tar.gz file</a>			  			 
             </section>
 			
 			<section id="main-menu">
-				<ul>		
+				<ul>					
 					{% for link in page.navigation %}
-					<li {% if page.url == link.url %}id="main-menu-current"{% endif %}>
+					<li {% if page.url == link.fullurl %}id="main-menu-current"{% endif %}>
 					   <a href="{{link.url}}" title="{{link.title}}">{{link.text}}</a></li>
 					{% endfor %}
 				</ul>				

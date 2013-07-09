@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "Design Considerations"
 date: 2013-07-01 8:59
 comments: true
