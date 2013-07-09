@@ -1,0 +1,87 @@
+---
+navigation:
+- text: Home
+  title: Home
+  url: /index.html
+- text: Design
+  title: Design Considerations
+  url: /design.html
+---
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Slate is a responsive theme for GitHub Pages" />
+    
+	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+   
+    <title>{{ page.title }}</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jigamiller/unitymappingfactory">View on GitHub</a>
+		  <div id="headerbadges">
+			{% include badges.html %}
+		  </div>
+		  
+          <h1 id="project_title">UnityMappingFactory</h1>
+          <h2 id="project_tagline">Extension which allows you to register factories that will create new objects based on data from different existing objects essentially mapping between them.</h2>		  		 
+		  
+			<section id="downloads">			  
+              <a class="zip_download_link" href="https://github.com/jigamiller/unitymappingfactory/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jigamiller/unitymappingfactory/tarball/master">Download this project as a tar.gz file</a>			  			 
+            </section>
+			
+			<section id="main-menu">
+				<ul>		
+					{% for link in page.navigation %}
+					<li {% if page.url == link.url %}id="main-menu-current"{% endif %}>
+					   <a href="{{link.url}}" title="{{link.title}}">{{link.text}}</a></li>
+					{% endfor %}
+				</ul>				
+			</section>
+		
+        </header>		
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+		<h1>{{ page.title }}</h1>
+		 {{content}}
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">	  	  
+      <footer class="inner">			  
+		<div id="footerbadges">
+			{% include badges.html %}			
+		</div>
+
+		<p class="copyright">UnityMappingFactory maintained by <a href="https://github.com/jigamiller">jigamiller</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>		
+      </footer>
+    </div>
+
+		  <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-41997399-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
+

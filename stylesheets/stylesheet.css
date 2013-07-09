@@ -51,6 +51,69 @@ table {
 Theme Styles
 *******************************************************************************/
 
+#footerbadges
+{
+  float: right;
+}
+
+#headerbadges
+{
+  position: absolute;
+  top: 60px;
+  right: 10px;  
+}
+
+.badges img
+{
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+#contact a img
+{
+  width: auto;  
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+#main-menu {	
+  position: absolute;
+  z-index: 10;
+  bottom: -40px;
+  left: 0;
+  height: 70px;
+}
+
+#main-menu ul {
+  margin:0;
+  padding:6px 0 6px 0;
+}
+
+#main-menu li  {	
+	display:inline;
+}
+
+#main-menu li a {
+	text-align:center;
+	padding:6px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+#main-menu li a:hover,a:active {	
+	color:#666
+}
+
+#main-menu-current a {	
+	color:#999
+}
+
+
 body {
   box-sizing: border-box;
   color:#373737;
