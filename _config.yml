@@ -1,5 +1,5 @@
 safe: true
-baseurl: /
+baseurl: /unitymappingfactory
 url: http://jigamiller.github.io/unitymappingfactory
 pygments: true
 markdown: redcarpet
