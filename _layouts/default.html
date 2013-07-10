@@ -1,13 +1,5 @@
 ---
-navigation:
-- text: Home
-  title: Home  
-  fullurl: /index.html
-  url: /
-- text: Design
-  title: Design Considerations
-  fullurl: /design.html
-  url: /design.html
+
 ---
 
 <!DOCTYPE html>
@@ -43,9 +35,9 @@ navigation:
 			
 			<section id="main-menu">
 				<ul>					
-					{% for link in page.navigation %}
+					{% for link in site.navigation %}
 					<li {% if page.url == link.fullurl %}id="main-menu-current"{% endif %}>
-					   <a href="{{link.url}}" title="{{link.title}}">{{link.text}}</a></li>
+					   <a href="{{site.baseurl}}{{link.url}}" title="{{link.title}}">{{link.text}}</a></li>
 					{% endfor %}
 				</ul>				
 			</section>
