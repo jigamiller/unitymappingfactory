@@ -52,4 +52,4 @@ This will provide the following 2 mappings:
 
 ## Details
 
-Calling the **RegisterFactory** method actually creates an instance of a **MappingFactory** clas and registers the instance of that class for the lifetime of the container. The class maintains a Dictionary of mappings that were added and utilizes the [IUnityContainer.Resolve()](http://msdn.microsoft.com/en-us/library/ff660794.aspx) method to create the requested object passing in the original object using the [DependencyOverride](http://msdn.microsoft.com/en-us/library/ff660920.aspx) parameter.
+Calling the **RegisterFactory** method actually creates an instance of a **MappingFactory** class and registers the instance of that class for the lifetime of the container. The class maintains a Dictionary of mappings that were added and utilizes the [IUnityContainer.Resolve()](http://msdn.microsoft.com/en-us/library/ff660794.aspx) method to create the requested object passing in the original object using the [DependencyOverride](http://msdn.microsoft.com/en-us/library/ff660920.aspx) parameter.
