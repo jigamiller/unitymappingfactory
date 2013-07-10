@@ -1,5 +1,5 @@
 safe: true
-baseurl: /unitymappingframework
+baseurl: /unitymappingfactory
 lsi: false
 pygments: true
 markdown: redcarpet
